@@ -1,0 +1,160 @@
+/* ---------- Base / Tokens ---------- */
+.host{
+  /* Modern Microsoft stack with crisp fallbacks */
+  font-family: "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+
+  /* Brand */
+  --deep-blue:#114461;
+  --lightblue:#00AEEF;
+  --orange:#FB8C2E;
+  --muted:#6A7A86;
+  --ink:#0F2430;
+
+  /* Elevation */
+  --shadow:0 6px 22px rgba(17,68,97,.12);
+  --inner:0 1px 0 rgba(17,68,97,.06), 0 10px 24px rgba(17,68,97,.08);
+
+  /* Type scale */
+  --fs-12:12px;
+  --fs-13:13px;
+  --fs-14:14px;
+  --fs-15:15px;
+  --fs-16:16px;
+  --fs-18:18px;
+
+  /* Global text tuning */
+  font-size: var(--fs-14);
+  line-height: 1.5;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Header ---------- */
+.header{
+  display:flex;align-items:center;gap:12px;margin-bottom:10px
+}
+.header h2{
+  margin:0;
+  color:var(--deep-blue);
+  font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+  font-size: 20px;         
+  font-weight: 600;         
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+}
+.header a{
+  margin-left:auto;
+  color:var(--lightblue);
+  font-weight:700;
+  font-size:var(--fs-14);
+  text-decoration:none;
+}
+.header a:hover{text-decoration:underline}
+.status{color:var(--muted);margin-bottom:12px}
+
+/* ---------- Layout ---------- */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+  gap:18px;
+}
+@media (max-width: 480px){
+  .grid{ grid-template-columns:1fr; }
+}
+
+/* ---------- Card ---------- */
+.card{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:var(--shadow);
+  padding:0 16px 12px;
+  display:flex;flex-direction:column;
+}
+
+/* Category bar (title + count) */
+.catbar{
+  background:var(--deep-blue);
+  color:#fff;
+  border-radius:14px;
+  margin:16px 0 14px;
+  padding:8px 14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+}
+.catname{
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.8px;   /* tighter uppercase style */
+  //text-transform: uppercase;
+}
+.count{
+  margin-left:auto;
+  font-size: 13px;
+  font-weight: 600;
+  opacity:.95;
+}
+
+/* ---------- Document pills ---------- */
+.doclist{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:12px;
+}
+
+.pill{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:var(--ink);
+  background:#fff;border:1px solid rgba(17,68,97,.16);
+  border-radius:999px;
+  padding:12px 16px;
+  box-shadow:var(--inner);
+  transition:transform .06s ease, box-shadow .12s ease, border-color .12s ease, background .12s ease;
+}
+
+/* File name typography */
+.title{
+  flex:1 1 auto;
+  font-size:var(--fs-15);           /* Slightly larger for legibility */
+  font-weight:600;                  /* Stronger than body but less than headers */
+  letter-spacing:.1px;
+}
+
+/* Two-line clamp option */
+.clamp2 .title{
+  display:-webkit-box;
+  line-clamp: 2;                    /* standard (for linter) */
+  -webkit-line-clamp: 2;            /* Chromium/Edge actual clamp */
+  -webkit-box-orient: vertical;
+  overflow:hidden;text-overflow:ellipsis;
+  line-height:1.35em;max-height:2.7em;
+}
+
+/* Icon dot */
+.dot{width:12px;height:12px;border-radius:50%;background:var(--orange);flex:0 0 auto}
+
+/* Hover/focus states (accessibility) */
+.pill:hover{
+  transform:translateY(-1px);
+  box-shadow:0 10px 26px rgba(17,68,97,.14);
+  border-color:var(--lightblue);
+  background:#f7fbff;
+}
+.pill:focus{
+  outline:3px solid #ffffff;        /* inner contrast */
+  outline-offset:2px;
+  box-shadow:0 0 0 4px rgba(0,174,239,.45); /* outer halo */
+}
+
+/* ---------- Card footer ---------- */
+.foot{display:flex;justify-content:flex-end;margin-top:12px}
+.more{
+  color:var(--lightblue);
+  font-weight:700;
+  font-size:var(--fs-14);
+  text-decoration:none;
+}
+.more:hover{text-decoration:underline}

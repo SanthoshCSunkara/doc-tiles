@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "doc-tiles-client-side-solution",
+    "id": "a4c27ea1-c78a-4a1f-b912-14a2b539d0bd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": false,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.19.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "doc-tiles description"
+      },
+      "longDescription": {
+        "default": "doc-tiles description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "doc-tiles Feature",
+        "description": "The feature that activates elements of the doc-tiles solution.",
+        "id": "1b1631bc-9ba0-4cc8-99c1-a1a9b9eb47c0",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/doc-tiles.sppkg"
+  }
+}

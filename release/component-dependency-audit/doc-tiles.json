@@ -1,0 +1,8 @@
+{
+  "bundles": {
+    "doc-tiles-web-part": {
+      "dependencies": [],
+      "asyncChunks": {}
+    }
+  }
+}

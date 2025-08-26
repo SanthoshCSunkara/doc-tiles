@@ -1,0 +1,10 @@
+﻿node_modules/
+dist/
+lib/
+temp/
+.cache/
+*.log
+.vscode/
+sharepoint/solution/*.sppkg
+sharepoint/solution/debug/
+temp_deploy/
