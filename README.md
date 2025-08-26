@@ -142,6 +142,8 @@ Screenshots
 <img width="1083" height="341" alt="image" src="https://github.com/user-attachments/assets/fa6b66c7-858f-43a5-96e7-add85d27a421" />
 
 App Properties:
+
+
 <img width="340" height="751" alt="image" src="https://github.com/user-attachments/assets/149b2397-90b3-4f0c-b92b-0e84471e9273" />
 
 
